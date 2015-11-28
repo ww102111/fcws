@@ -5,6 +5,13 @@ FCWS
 
 # 教程
 
+本教程存放在我的[blog](mclspace.com)上，目录如下:
+- [目录](http://mclspace.com/2015/11/21/ionic-app-0/)
+- [技术综述](http://mclspace.com/2015/11/23/ionic-app-1/)：该项目中所用到的技术知识
+- [软件总体架构](http://mclspace.com/2015/11/24/ionic-app-2/)：前后端通信的一个整体框架
+- [客户端实现](http://mclspace.com/2015/11/28/ionic-app-3/)：使用Ionic实现客户端 
+- [服务器端实现](http://mclspace.com/2015/11/28/ionic-app-4/): 使用Nodejs与Mongodb实现服务器端 
+
 # 运行步骤
 首先打开Mongod数据库,默认的数据库名称为test
 
