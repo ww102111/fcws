@@ -53,4 +53,4 @@ $ ionic serve
 运行成功!
 
 #运行截图
-![](./images/preview.png)
+![](http://7pun7p.com1.z0.glb.clouddn.com/blog/preview.png)
