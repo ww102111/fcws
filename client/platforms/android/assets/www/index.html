@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+    <title></title>
+
+    <link href="lib/ionic/css/ionic.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+
+    <!-- IF using Sass (run gulp sass first), then uncomment below and remove the CSS includes above
+    <link href="css/ionic.app.css" rel="stylesheet">
+    -->
+
+    <!-- ionic/angularjs js    -->
+    <script src="lib/ionic/js/ionic.bundle.js"></script>
+
+
+
+    <!-- bower lib
+    <script src="lib/moment/moment.js"></script>
+    <script src="lib/moment/locale/zh-cn.js"></script>
+    <script src="lib/angular-moment/angular-moment.js"></script>
+    -->
+
+
+    <script src="lib/ngCordova/dist/ng-cordova.js"></script>
+
+    <script src="lib/angular-animate/angular-animate.js"></script>
+    <script src="lib/angular-sanitize/angular-sanitize.js"></script>
+    <script src="lib/angular-ui-router/release/angular-ui-router.js"></script>
+    <script src="lib/moment/min/moment-with-locales.js"></script>
+    <script src="lib/angular-moment/angular-moment.js"></script>
+
+
+    <!-- cordova script (this will be a 404 during development) -->
+    <script src="cordova.js"></script>
+
+    <!-- your app's js -->
+    <script src="js/app.js"></script>
+    <!-- services: -->
+    <script src="js/services/API.js"></script>
+    <script src="js/services/Camera.js"></script>
+    <script src="js/services/Contact.js"></script>
+    <script src="js/services/Docs.js"></script>
+    <script src="js/services/Orgnizations.js"></script>
+    <script src="js/services/Post.js"></script>
+    <script src="js/services/Posts.js"></script>
+    <script src="js/services/Preview.js"></script>
+    <script src="js/services/User.js"></script>
+    <script src="js/services/Message.js"></script>
+
+
+    <!-- controllers -->
+    <script src="js/controllers/auth/auth.js"></script>
+    <script src="js/controllers/auth/login.js"></script>
+    <script src="js/controllers/auth/signup.js"></script>
+    <script src="js/controllers/auth/changepw.js"></script>
+
+
+    <script src="js/controllers/post/post.js"></script>
+    <script src="js/controllers/post/posts.js"></script>
+
+    <script src="js/controllers/control/broadcast.js"></script>
+    <script src="js/controllers/control/control.js"></script>
+    <script src="js/controllers/control/group.js"></script>
+    <script src="js/controllers/control/point.js"></script>
+    <script src="js/controllers/control/text.js"></script>
+    <script src="js/controllers/control/view.js"></script>
+
+    <script src="js/controllers/train/plan.js"></script>
+    <script src="js/controllers/train/exam.js"></script>
+    <script src="js/controllers/train/rule.js"></script>
+    <script src="js/controllers/train/search.js"></script>
+    <script src="js/controllers/train/tab.js"></script>
+
+    <script src="js/controllers/education/achieve.js"></script>
+    <script src="js/controllers/education/edu.js"></script>
+    <script src="js/controllers/education/plan.js"></script>
+    <script src="js/controllers/education/rule.js"></script>
+    <script src="js/controllers/education/tab.js"></script>
+
+    <script src="js/controllers/defence/tab.js"></script>
+    <script src="js/controllers/defence/call.js"></script>
+    <script src="js/controllers/defence/organization.js"></script>
+    <script src="js/controllers/defence/potential.js"></script>
+    <script src="js/controllers/defence/rule.js"></script>
+
+
+    <!-- <script src="js/controllers/contact/tab.js"></script> -->
+    <!-- <script src="js/controllers/contact/unit.js"></script> -->
+    <!-- <script src="js/controllers/contact/userdefine.js"></script> -->
+    <!-- <script src="js/controllers/contact/mission.js"></script> -->
+
+    <script src="js/controllers/contact/contact.js"></script>
+    <script src="js/controllers/contact/contact_area.js"></script>
+    <script src="js/controllers/contact/contact_town.js"></script>
+
+
+    <script src="js/controllers/config.js"></script>
+    <script src="js/controllers/user.js"></script>
+    <script src="js/controllers/dash.js"></script>
+    <script src="js/controllers/message.js"></script>
+    <script src="js/controllers/sidemenu.js"></script>
+
+
+    <!-- utils -->
+    <script src="js/utils/storage.js"></script>
+
+  </head>
+  <body ng-app="fcws" class="platform-android platform-cordova platform-webview">
+        <!-- <ion-nav-bar class="bar-positive nav-title-slide-ios">
+      <ion-nav-back-button class="button-icon icon ion-chevron-left">
+          Back
+        </ion-nav-back-button>
+    </ion-nav-bar> -->
+
+  <ion-nav-view ></ion-nav-view>
+  </body>
+</html>

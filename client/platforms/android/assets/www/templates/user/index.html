@@ -1,0 +1,88 @@
+<ion-view view-title="个人主页">
+  <ion-nav-buttons side="left">
+    <button menu-toggle="left" class="button button-icon icon ion-navicon"></button>
+  </ion-nav-buttons>
+  <ion-content>
+      <ion-refresher on-refresh="reloadUser()"></ion-refresher>
+      <ion-list>
+        <ion-item class="item-divider item-gap">
+        </ion-item>
+        <ion-item class="item-avatar">
+          <img ng-src="img/commander.jpg" >
+          <span>{{user.name}}</span>
+          <p>{{user.title}}</p>
+        </ion-item>
+        <ion-item class="item-divider">
+          最近主题
+        </ion-item>
+        <ion-item ng-repeat="post in user.recent_posts" ui-sref='sidemenu.post({post_id: post._id})'>
+          <h2 class="positive">{{post.content}}</h2>
+          <p>
+            {{post.userName}}
+            <span class="item-note" am-time-ago="post.createDate">
+            </span>
+          </p>
+        </ion-item>
+
+        <ion-item class="item-divider">
+          最近回复
+        </ion-item>
+
+        <ion-item  ng-repeat="reply in user.recent_replies" ui-sref='sidemenu.post({post_id: reply.postId})'>
+          <h2 class="positive">{{reply.content}}</h2>
+          <p>
+            {{reply.userName}}
+            <span class="item-note" am-time-ago="reply.createDate">
+            </span>
+          </p>
+        </ion-item>
+
+      </ion-list>
+  </ion-content>
+</ion-view>
+
+
+<!-- <ion-view view-title="{{user.loginname}}">
+  <ion-content class="has-header user">
+    <ion-refresher pulling-text="下拉刷新..." on-refresh="doRefresh()" refreshing-icon="ion-loading-c">
+    </ion-refresher>
+    <ion-list>
+      <ion-item class="item-divider item-gap">
+      </ion-item>
+      <ion-item class="item-avatar">
+        <img ng-src="{{user.avatar_url | protocol}}" ng-if="!settings.saverMode">
+        <span>{{user.loginname}}</span>
+        <span>{{user.score}}积分</span>
+        <p>
+        注册于：{{user.create_at | amDateFormat:'YYYY-MM-DD hh:mm:ss'}}
+        </p>
+        <p>
+        <a href="#/user/{{user.loginname}}/collections">{{user.collect_topics.length}}话题收藏</a>
+        </p>
+      </ion-item>
+      <ion-item class="item-divider">
+        最近主题
+      </ion-item>
+      <ion-item ng-repeat="topic in user.recent_topics" href="#/topic/{{topic.id}}">
+        <h2>{{topic.title}}</h2>
+        <p>
+          {{topic.author.loginname}}
+          <span class="item-note" am-time-ago="topic.last_reply_at">
+          </span>
+        </p>
+      </ion-item>
+      <ion-item class="item-divider">
+        最近回复
+      </ion-item>
+      <ion-item class="item-avatar" ng-repeat="topic in user.recent_replies" href="#/topic/{{topic.id}}">
+        <img ng-src="{{topic.author.avatar_url | protocol}}" ng-if="!settings.saverMode">
+        <h2>{{topic.title}}</h2>
+        <p>
+          {{topic.author.loginname}}
+          <span class="item-note" am-time-ago="topic.last_reply_at">
+          </span>
+        </p>
+      </ion-item>
+    </ion-list>
+  </ion-content>
+</ion-view> -->

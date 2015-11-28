@@ -1,0 +1,64 @@
+<ion-view view-title="收件箱" >
+  <ion-content>
+  <ion-refresher on-refresh="reloadMessages()"></ion-refresher>
+    <!-- <ion-list class="messages"> -->
+    <ion-list>
+      <!-- <div class="list card" ng-repeat="message in messages">
+        <div class="item item-avatar-left " >
+          <img src="../../img/commander.jpg">
+
+          <h2 >{{message.name}}</h2>
+          <p >{{message.title}}</p>
+        </div >
+        <div class="item item-text-wrap">
+          {{message.content}}</br>
+          <p class="item-note">{{message.create_at}}</p>
+        </div>
+      </div> -->
+      <!-- ng-class="{hasnot_read : !message.has_read,has_read: message.has_read}" -->
+      <div class="item item-divider positive">
+        未读消息
+      </div>
+      <div ng-repeat="message in messages.hasnot_read_messages" >
+        <div class="item item-avatar-left" ng-click="showContent(message)">
+          <img src="img/commander.jpg">
+          <span class="item-note">{{message.createDate}}</span>
+          <h2 >{{message.senderTitle}}-{{message.senderName}}</h2>
+          <p >{{message.content}}</p>
+        </div>
+      </div >
+
+      <div class="item item-divider positive">
+        已读消息
+      </div>
+      <div ng-repeat="message in messages.has_read_messages" >
+        <div class="item item-avatar-left" ng-click="showContent(message)">
+          <img src="img/commander.jpg">
+          <span class="item-note">{{message.createDate}}</span>
+          <h2 >{{message.senderTitle}}-{{message.senderName}}</h2>
+          <p >{{message.content}}</p>
+        </div>
+      </div >
+    </ion-list>
+
+    <!-- <div class="card" ng-show="noData">
+        <div class="item item-text-wrap" >
+           <span>
+             您没有收到任何消息
+           </span>
+        </div>
+     </div> -->
+
+  </ion-content>
+</ion-view>
+
+<!-- <script id="my-popover.html" type="text/ng-template">
+  <ion-popover-view>
+    <ion-header-bar class="bar-positive">
+      <h1 class="title">{{selectMessage.title}}-{{selectMessage.name}}</h1>
+    </ion-header-bar>
+    <ion-content>
+      {{selectMessage.content}}
+    </ion-content>
+  </ion-popover-view>
+</script> -->

@@ -1,0 +1,16 @@
+<div class="modal">
+
+    <!-- Modal header bar -->
+    <ion-header-bar class="bar-secondary bar-positive" >
+      <h1 class="title">预览</h1>
+      <button class="button button-clear button-light" ng-click="closeModal()">关闭</button>
+    </ion-header-bar>
+
+    <!-- Modal content area -->
+    <ion-content>
+      <!-- <ion-scroll  direction="xy" > -->
+          <div ng-bind-html="docHtml" class="wide-as-needed"></div>
+      <!-- </ion-scroll> -->
+    </ion-content>
+
+  </div>

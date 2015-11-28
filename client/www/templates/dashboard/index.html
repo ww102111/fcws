@@ -1,0 +1,73 @@
+<ion-view view-title="首页" >
+  <ion-nav-buttons side="left">
+    <button menu-toggle="left" class="button button-icon icon ion-navicon"></button>
+  </ion-nav-buttons>
+  <ion-nav-buttons side="right">
+    <button  class="button button-icon icon ion-email"  ng-click="openEmail()" ng-if="!unRead"></button>
+    <button  class="button button-icon icon ion-email-unread"  ng-click="openEmail()" ng-if="unRead"></button>
+  </ion-nav-buttons>
+  <!-- <ion-nav-buttons side="right">
+    <button class="button button-icon icon ion-email"></button>
+  </ion-nav-buttons> -->
+
+  <ion-content>
+    <ion-refresher on-refresh="reloadRecent()"></ion-refresher>
+    <div class="item item-divider item-positive">
+      最新情报
+     </div>
+     <div class="card" ng-show="noData">
+         <div class="item item-text-wrap" >
+            <span>
+              目前没有任何新的情报
+            </span>
+         </div>
+      </div>
+     <ion-list can-swipe="true">
+       <div ng-repeat="post in posts">
+         <a class="item item-avatar-left" ng-class="{'important': post.important}"
+         ui-sref='sidemenu.post({post_id: post._id})'>
+           <img ng-src="img/avatar.jpg">
+           <h2>
+             <!-- <i class="icon ion-ios-bolt assertive" ng-if="post.important"></i>
+             <i class="icon ion-ios-sunny positive" ng-if="!post.important"></i> -->
+
+             <button class= "button button-outline button-assertive button-small"
+             ng-if="post.important" >
+             紧急
+           </button>
+             <button class= "button button-outline button-positive button-small"
+             ng-if="!post.important" >日常</button>
+             {{post.content | limitTo:lengthLimit}}{{post.content.length > lengthLimit?"...":""}}
+             <span >
+               <i class="icon ion-ios-heart item-note ">
+                 {{post.likesCount >0?post.likesCount:0}}
+               </i>
+               <i class="icon ion-chatboxes  item-note">
+                  {{post.replyCount >0?post.replyCount:0}}&nbsp;
+                </i>
+             </span>
+           </h2>
+           <p >
+             <i class="icon ion-ios-person-outline positive"></i>
+              {{post.userName}}
+             <span am-time-ago="post.createDate" class="item-note">
+             </span>
+           </p>
+         </a>
+       </div>
+     </ion-list>
+
+    <div class="item item-divider item-positive">
+      最近通知
+     </div>
+     <div class="list">
+       <div ng-repeat="doc in docs">
+         <a class="item item-icon-left item-icon-right" ng-click="showDoc(doc)">
+           <i class="icon ion-ios-book-outline positive"></i>
+           {{doc.name}}
+           <i class="icon ion-ios-arrow-right positive"></i>
+         </a>
+       </div>
+     </div>
+  </ion-content>
+</ion-view>

@@ -1,0 +1,27 @@
+<ion-view view-title="群组下达" >
+  <ion-nav-buttons side="left">
+    <button menu-toggle="left" class="button button-icon icon ion-navicon"></button>
+  </ion-nav-buttons>
+  <ion-content>
+    <div class="card" ng-if="noData">
+        <div class="item item-text-wrap" >
+           <span>
+             您没有任何可以命令的部队
+           </span>
+        </div>
+     </div>
+    <ion-list >
+      <div class="item " ng-repeat="troop in troops"
+           ng-click="showNewMessageModal(troop)">
+        <h2><i class="icon ion-ios-location-outline "></i> {{troop.name}} </h2>
+      </div>
+
+      <!-- <ion-item class="item item-avatar-left ">
+        <img src="../../img/soilder.jpg">
+        <h2 class="icon ion-person">{{troop.name}}</h2>
+        <p class="icon ion-ribbon-b">{{troop.title}}</p>
+      </ion-item> -->
+
+    </ion-list>
+  </ion-content>
+</ion-view>

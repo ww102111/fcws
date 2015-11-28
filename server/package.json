@@ -1,0 +1,23 @@
+{
+  "name": "Zlyc",
+  "version": "0.0.1",
+  "description": "A REST server for zlyc app",
+  "main": "server.js",
+  "private": true,
+  "scripts": {
+    "test": "node server.js"
+  },
+  "author": "Lin Chen",
+  "license": "MIT",
+  "engines": {
+    "node": "0.12.x"
+  },
+  "dependencies": {
+    "bcrypt": "^0.8.3",
+    "eventproxy": "^0.3.4",
+    "lodash": "^3.10.1",
+    "mongojs": "^0.18.2",
+    "morgan": "^1.5.3",
+    "restify": "^3.0.3"
+  }
+}

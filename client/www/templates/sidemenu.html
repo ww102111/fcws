@@ -1,0 +1,43 @@
+<ion-side-menus enable-menu-with-back-views="false">
+  <ion-side-menu-content>
+    <ion-nav-bar class="bar-positive nav-title-slide-ios">
+      <ion-nav-back-button class="button-clear">
+      </ion-nav-back-button>
+    </ion-nav-bar>
+
+    <ion-nav-view name="menuContent">
+    </ion-nav-view>
+  </ion-side-menu-content>
+
+  <ion-side-menu side="left">
+    <ion-content class="bar-positive">
+      <ion-list>
+        <ion-item nav-clear menu-close class="item item-avatar item-positive" href="#/sidemenu/user">
+          <img src="img/commander.jpg">
+          <h2 class=" light">
+            <i class="icon ion-ios-star"></i>{{title}}
+          </h2>
+          <a>{{username}}</a>
+        </ion-item>
+        <ion-item nav-clear menu-close href="#/sidemenu/dashboard" class="item-icon-left">
+          <i class="icon ion-ios-home-outline positive">        </i>首页</ion-item>
+        <ion-item nav-clear menu-close href="#/sidemenu/posts" class="item-icon-left">
+          <i class="icon ion-ios-pulse positive">              </i>情报信息</ion-item>
+        <ion-item nav-clear menu-close href="#/sidemenu/control" class="item-icon-left">
+          <i class="icon ion-ios-speedometer-outline positive"></i>指挥控制</ion-item>
+        <ion-item nav-clear menu-close href="#/sidemenu/train" class="item-icon-left">
+          <i class="icon ion-ios-shuffle positive">            </i>军事训练</ion-item>
+        <ion-item nav-clear menu-close href="#/sidemenu/education" class="item-icon-left">
+          <i class="icon ion-ios-bookmarks-outline positive">  </i>教育管理</ion-item>
+        <ion-item nav-clear menu-close href="#/sidemenu/defence" class="item-icon-left">
+          <i class="icon ion-ios-plus-outline positive">       </i>国防动员</ion-item>
+        <ion-item nav-clear menu-close href="#/sidemenu/contact" class="item-icon-left">
+          <i class="icon ion-ios-people-outline positive">     </i>通讯录</ion-item>
+        <!-- <ion-item nav-clear menu-close href="#/sidemenu/message"  class="item-icon-left">
+          <i class="icon ion-email"></i>收件箱</ion-item> -->
+        <ion-item nav-clear menu-close href="#/sidemenu/config" class="item-icon-left">
+          <i class="icon ion-ios-settings positive">           </i>设置</ion-item>
+      </ion-list>
+    </ion-content>
+  </ion-side-menu>
+</ion-side-menus>

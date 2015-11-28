@@ -1,0 +1,16 @@
+<ion-view view-title="法规政策" >
+  <ion-nav-buttons side="left">
+    <button menu-toggle="left" class="button button-icon icon ion-navicon"></button>
+  </ion-nav-buttons>
+  <ion-content>
+    <div class="list">
+      <div ng-repeat="doc in docs">
+        <a class="item item-icon-left item-icon-right" ng-click="showDoc(doc)">
+          <i class="icon ion-ios-book-outline positive"></i>
+          {{doc.name}}
+          <i class="icon ion-ios-arrow-right positive"></i>
+        </a>
+      </div>
+    </div>
+  </ion-content>
+</ion-view>
