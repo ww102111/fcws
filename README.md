@@ -46,9 +46,4 @@ $ ionic serve
 运行成功!
 
 #运行截图
-数据库数据：
-![](./images/mongodb.png)
-登录:
-![](./images/login.png)
-侧边栏:
-![](./images/sidemenu.png))
+![](./images/preview.png)
