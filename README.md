@@ -1,16 +1,11 @@
-FCWS
+FCWS(Deprecated) 已过时
 ======
 
+> 本项目目前分为前端和后端分别维护
+> 前端在[fcws-ionic](git@github.com:rdmclin2/fcws-ionic.git)
+> 后端在[fcws-backend](git@github.com:rdmclin2/fcws-backend.git)
+
 > FCWS是一个基于Ionic，Nodejs，Mongodb开发的端到端移动应用。要运行该项目，需要首先安装相应的环境，包括Nodejs,Ionic,Mongodb。以下步骤的测试环境为MacOS,其他系统暂未测试。
-
-# 教程
-
-本教程存放在我的[blog](mclspace.com)上，目录如下:
-- [目录](http://mclspace.com/2015/11/21/ionic-app-0/)
-- [技术综述](http://mclspace.com/2015/11/23/ionic-app-1/)：该项目中所用到的技术知识
-- [软件总体架构](http://mclspace.com/2015/11/24/ionic-app-2/)：前后端通信的一个整体框架
-- [客户端实现](http://mclspace.com/2015/11/28/ionic-app-3/)：使用Ionic实现客户端 
-- [服务器端实现](http://mclspace.com/2015/11/28/ionic-app-4/): 使用Nodejs与Mongodb实现服务器端 
 
 # 运行步骤
 首先打开Mongod数据库,默认的数据库名称为test
