@@ -2,8 +2,9 @@ FCWS(Deprecated) 已过时
 ======
 
 > 本项目目前分为前端和后端分别维护
-> 前端在[fcws-ionic](git@github.com:rdmclin2/fcws-ionic.git)
-> 后端在[fcws-backend](git@github.com:rdmclin2/fcws-backend.git)
+
+- 前端在[fcws-ionic](https://github.com/rdmclin2/fcws-ionic)
+- 后端在[fcws-backend](https://github.com/rdmclin2/fcws-backend)
 
 > FCWS是一个基于Ionic，Nodejs，Mongodb开发的端到端移动应用。要运行该项目，需要首先安装相应的环境，包括Nodejs,Ionic,Mongodb。以下步骤的测试环境为MacOS,其他系统暂未测试。
 
